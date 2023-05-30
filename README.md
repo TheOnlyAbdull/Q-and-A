@@ -2,8 +2,7 @@
     - description : question and answer platform to take test
 
 ## Product Overview:
-    -
-
+    
 ## Key Features:
     List the main features and functionalities of the product.
 
@@ -18,7 +17,15 @@
     Explain how to run the project locally.
 
 ## Features:
-    List the main features or functionality of the project.
+    -you will have 15s for each question
+    - after 15s the question moves to next even without being answered
+    -you cannot go back to the previous question
+    - you are allowed to move to the next question without answering the current
+    - you score will be calcuulate at the end of the quiz
+    - you will be notified if you passed or failed
+    - you can end the quiz at the middle and the score is calculated
+    - 
+
 
 ## Resources and References:
     List any external resources or references used during development.
