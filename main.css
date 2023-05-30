@@ -16,7 +16,7 @@ header{
     justify-content: center;
     align-items: center;
     background: #2196F3;
-    /* color:#FFFFFF ; */
+    color:#FFFFFF ;
 }
 nav div{
     font-family: 'Ubuntu', sans-serif;
@@ -32,26 +32,56 @@ nav div{
     align-items: center;
     /* background: #E3F2FD; */
 }
-/* .container-1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-.content-1{
-    border: 2px dotted red;
+.container-1{
+    width: 100%;
+    /* border: 2px dotted red; */
 }
-form p {
-    display: inline;
+.content-1{
+    /* border: 2px dotted red; */
+    width: 40%;
+    margin: 0 auto;
+}
+.content-1 h1{
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #2196F3;
+}
+.input-div p {
     font-size: 16px;
     font-weight: bold;
     font-size: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    color: #212121;
 }
-form input{
-    width: 19rem;
+.input-div input{
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    color: #212121;
+    padding: .4rem .3rem;
+    font-size: 1rem;
 }
 form button{
     display: block;
-    width: 80%;
+    padding: .3rem 0;
+    font-size: 1rem;
+    width: 90%;
     margin:0 auto;
     margin-top: .5rem;
+    color: #FFFFFF;
+    background: #64B5F6;
+    border: 2px solid #64B5F6;
+    transition: .4s linear;
+}
+form button:hover{
+    background: #FFFFFF;
+    color: #64B5F6;
+}
+
+
+@media screen and (max-width : 650px) {
+    .content-1{
+        width: 70%;
+    }
 }
