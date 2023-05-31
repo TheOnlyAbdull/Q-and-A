@@ -7,12 +7,39 @@
     box-sizing: border-box;
     font-family: 'Overpass', sans-serif;
 }
-.intro-sec, .rule-sec{
+.intro-sec, .rule-sec, .quest-sec{
     width: 100%;
     height: 92vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* prev and next button styles */
+.btn-div{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-div button{
+    padding: .4rem .8rem;
+    text-align: center;
+    /* transition: .4s linear; */
+    margin-top: 2rem;
+    border: 2px solid #1976D2;
+}
+.btn-div button a{
+    display: block;
+    width: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+.btn-div button.prev{
+    color: #1976D2;;
+    background: #FFFFFF;
+}
+.btn-div button.next{
+    background: #1976D2;
+    color: #FFFFFF;
 }
 
 /* ----------------HEADER----------------- */
@@ -38,7 +65,7 @@ nav div{
 .content-1{
     /* border: 2px dotted red; */
     width: 40%;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 .content-1 h1{
     margin-bottom: 1.5rem;
@@ -70,13 +97,14 @@ form button {
     margin:0 auto;
     margin-top: .5rem;
     color: #FFFFFF;
-    background: #64B5F6;
-    border: 2px solid #64B5F6;
+    background: #1976D2;;
+    /* background: #64B5F6; */
+    border: 2px solid #1976D2;;
     transition: .4s linear;
 }
 form button:hover{
     background: #FFFFFF;
-    color: #64B5F6;
+    color: #1976D2;;
 }
 form button a{
     text-decoration: none;
@@ -87,10 +115,6 @@ form button a{
     padding: .3rem 0;
 }
 
-
-
-
-
 /* ----------------RULE-SECTION  -  RULES.HTML----------------- */
 .container-2{
     width: 100%;
@@ -98,10 +122,9 @@ form button a{
 }
 .content-2{
     width: 40% ;
-    padding: 2rem 2rem;
-    margin: 0 auto;
+    padding: 2rem;
+    margin: 1rem auto;
     border: 2px dotted #2196F3;
-    position: relative;
 }
 .content-2 h2{
     margin-bottom: .6rem;
@@ -114,34 +137,79 @@ form button a{
 .rules-p p{
     line-height: 1.5;
     letter-spacing: .5px;
+    /* font-weight: 600; */
+    font-family: 'Overpass', sans-serif;
+    color: #212121;
 }
-.content-2 .btn-div{
+
+
+/* ----------------QUESTION-SECTION  -  QUESTIONS.HTML----------------- */
+.container-3{
+    width: 100%;
+    /* border: 2px dotted #2196F3; */
+}
+.content-3{
+    width: 40%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 2px dotted #2196F3;
+}
+.content-3 .title{
     display: flex;
     justify-content: space-between;
-}
-.content-2 button{
-    padding: .4rem .8rem;
-    text-align: center;
-    transition: .4s linear;
-    margin-top: 2rem;
-    border: 2px solid #2196F3;
-    /* border-radius: 5px; */
-}
-.content-2 button a{
-    display: block;
-    width: inherit;
-    text-decoration: none;
-    color: inherit;
-}
-.content-2 button.prev{
-    color: #2196F3;
-    background: #FFFFFF;
-    margin-right: 4rem;
-}
-.content-2 button.next{
-    background: #2196F3;
+    /* background:#2196F3 ; */
+    background: #1976D2;;
+    padding: .7rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Overpass', sans-serif;
     color: #FFFFFF;
+    text-transform: capitalize;
 }
+.content-3 .title .time{
+    /* padding: .3rem .4rem; */
+    color: #FFFFFF;
+    background: #1976D2;
+}
+.content-3 .title .time .seconds{
+    background: #FFFFFF;
+    color: #1976D2;
+}
+.content-3 .question{
+    color: #1976D2;
+    margin-bottom: 1rem;
+}
+.content-3 .options p{
+    padding: .35rem .3rem .35rem .6rem;
+    margin-bottom: .4rem;
+    border: 1px solid #2196F3;
+    background: #E3F2FD;
+    color: #212121;
+    transition: .4s ease-in-out;
+    font-size: 1rem;
+}
+.content-3 .options p:hover{
+    background: #2196F3;
+    /* background: #1976D2; */
+}
+.btn-div.ques button{
+    margin-top: .5rem;
+}
+p.ques-left{
+    text-align: center;
+    font-size: 1rem;
+    color:#212121;
+    margin-top: .3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
 
 
 
@@ -158,6 +226,9 @@ form button a{
     .content-2{
         width: 90%;
     }
+    .content-3{
+        width: 90%;
+    }
 }
 
 
@@ -167,6 +238,9 @@ form button a{
         width: 80%;
     }
     .content-2{
+        width: 60%;
+    }
+    .content-3{
         width: 60%;
     }
 }
