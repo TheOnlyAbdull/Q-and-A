@@ -148,7 +148,7 @@ p.error{
 }
 .content-3{
     width: 40%;
-    margin: 1rem auto;
+    margin: 2rem auto;
     padding: 1rem;
     border: 2px dotted #2196F3;
 }
@@ -257,6 +257,12 @@ p.ques-left{
     }
     .content-2, .content-3, .content-4{
         width: 90%;
+    }
+    .content-2{
+        padding: 1rem;
+    }
+    .content-3{
+        padding: .8rem;
     }
 }
 
