@@ -7,7 +7,7 @@
     box-sizing: border-box;
     font-family: 'Overpass', sans-serif;
 }
-.intro-sec, .rule-sec, .quest-sec{
+.intro-sec, .rule-sec, .quest-sec, .result-sec{
     width: 100%;
     height: 92vh;
     display: flex;
@@ -114,6 +114,14 @@ form button a{
     display: block;
     padding: .3rem 0;
 }
+p.error{
+    text-align: center;
+    margin-top: .5rem;
+    color: red;
+    font-weight: bold;
+    /* display: none; */
+    visibility:hidden;
+}
 
 /* ----------------RULE-SECTION  -  RULES.HTML----------------- */
 .container-2{
@@ -141,12 +149,14 @@ form button a{
     font-family: 'Overpass', sans-serif;
     color: #212121;
 }
+#curr-name{
+    text-transform: capitalize;
+}
 
 
 /* ----------------QUESTION-SECTION  -  QUESTIONS.HTML----------------- */
 .container-3{
     width: 100%;
-    /* border: 2px dotted #2196F3; */
 }
 .content-3{
     width: 40%;
@@ -157,7 +167,6 @@ form button a{
 .content-3 .title{
     display: flex;
     justify-content: space-between;
-    /* background:#2196F3 ; */
     background: #1976D2;;
     padding: .7rem 1rem;
     margin-bottom: 1rem;
@@ -168,7 +177,6 @@ form button a{
     text-transform: capitalize;
 }
 .content-3 .title .time{
-    /* padding: .3rem .4rem; */
     color: #FFFFFF;
     background: #1976D2;
 }
@@ -191,7 +199,6 @@ form button a{
 }
 .content-3 .options p:hover{
     background: #2196F3;
-    /* background: #1976D2; */
 }
 .btn-div.ques button{
     margin-top: .5rem;
@@ -205,6 +212,44 @@ p.ques-left{
     margin-top: 1rem;
 }
 
+/* ----------------RESULT-SECTION  -  RESULT.HTML----------------- */
+.container-4{
+    width: 100%;
+}
+.content-4{
+    width: 40%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 2px dotted #2196F3;
+}
+.content-4 h1{
+    text-align: center;
+    color: #1976D2;
+    line-height: 1.7;
+}
+.home-btn button{
+    color: #FFFFFF;
+    background: #1976D2;;
+    /* background: #64B5F6; */
+    border: 2px solid #1976D2;;
+    transition: .4s linear;
+    width: 70%;
+    margin: 1rem auto;
+    height: 2.2rem;
+    display: block;
+}
+.home-btn button:hover{
+    background: #FFFFFF;
+    color: #1976D2;
+}
+.home-btn button a{
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: .3rem 0;
+}
 
 
 
@@ -223,10 +268,7 @@ p.ques-left{
     .content-1{
         width: 95%;
     }
-    .content-2{
-        width: 90%;
-    }
-    .content-3{
+    .content-2, .content-3, .content-4{
         width: 90%;
     }
 }
@@ -237,10 +279,7 @@ p.ques-left{
     .content-1{
         width: 80%;
     }
-    .content-2{
-        width: 60%;
-    }
-    .content-3{
+    .content-2, .content-3, .content-4{
         width: 60%;
     }
 }
