@@ -8,10 +8,14 @@ currName.textContent = getName;
 //FUNCTION remove name from local storage
 const removeFromLS = ()=>{
     localStorage.removeItem("name");
+    console.log('cleared ');
 }
 
 //Go back and remove LC
 const prev = document.getElementById('home');
 prev.addEventListener('click', ()=>{
     removeFromLS();
-})
+});
+
+
+export {removeFromLS};
