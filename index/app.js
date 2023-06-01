@@ -20,7 +20,7 @@ startBtn.addEventListener('click', (e)=>{
     if(userName.length > 0){
         //save to local storage
         localStorage.setItem('name', userName);
-        window.location.href ='./rules.html'
+        window.location.href ='../rules/rules.html';
     }else{
         errMsg();
     }

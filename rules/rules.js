@@ -6,7 +6,7 @@ const currName = document.getElementById('curr-name');
 currName.textContent = getName;
 
 //FUNCTION remove name from local storage
-export const removeFromLS = ()=>{
+const removeFromLS = ()=>{
     localStorage.removeItem("name");
 }
 
