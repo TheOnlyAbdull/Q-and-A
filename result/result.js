@@ -1,17 +1,7 @@
-import { removeFromLS } from "../rules/rules";
-
-//on GO HOME click
-const goHome = document.querySelector('.Go-home');
-goHome.addEventListener('click', (e)=>{
-    removeFromLS();
-    console.log('pop');
-})
-
-/*
-//getting the name from L.S
+//make the name display
 const getName = localStorage.getItem('name');
+console.log(getName); //debugging
 
-//display user name
-const currentName = document.getElementById('Uname');
-currentName.textContent = getName;
-*/
+//display name to result
+const perName = document.getElementById('person-name');
+perName.textContent = getName; 

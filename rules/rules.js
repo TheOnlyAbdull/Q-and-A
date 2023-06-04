@@ -1,12 +1,13 @@
 //getting the name from L.S
 const getName = localStorage.getItem('name');
+console.log(getName);
 
 //display user name
 const currName = document.getElementById('curr-name');
 currName.textContent = getName;
 
 //FUNCTION remove name from local storage
-const removeFromLS = ()=>{
+function removeFromLS() {
     localStorage.removeItem("name");
     console.log('cleared ');
 }
@@ -17,5 +18,3 @@ prev.addEventListener('click', ()=>{
     removeFromLS();
 });
 
-
-export {removeFromLS};
