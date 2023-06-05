@@ -2,6 +2,34 @@
     - description : question and answer platform to take test
 
 ## Product Overview:
+    -1 create a  data structure(array of objects) :
+            const quizQuestions = [
+                {
+                    que : 'who is bill gates',
+                    opt : ['lawyer', 'business man', 'doctor', 'programmer']
+                    ans : 1
+                }
+            ]
+    -2 storing all the questions to local storage
+        -To make the questions available offline
+        -to enable fast load
+
+    -3 display first question
+
+    -4 loop through the options and create an option paragraph
+        <p class="opt">Bill Gates</p>
+
+    -5 add eventlistener to the paragraph
+    (ifquestionindex > array.length)
+        -moves to next question when clicked
+        - questionindex++
+        --score++ if correct
+    (ifquestionindex < array.length)
+        - display finall result
+    
+
+
+
     
 ## Key Features:
     List the main features and functionalities of the product.
