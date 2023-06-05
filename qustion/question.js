@@ -13,7 +13,7 @@ const quizQuestions = [
     {
         que : 'which country is the artiste Wizkid from ?',
         opt : ['Atlanta', 'Ghanna', 'Togo', 'Nigeria'],
-        ans : 1
+        ans : 3
     },
     {
         que : 'Which artist painted the Mona Lisa?',
