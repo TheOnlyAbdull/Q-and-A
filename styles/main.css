@@ -184,6 +184,7 @@ p.error{
     color: #212121;
     font-size: 1rem;
     transition: background-color .4s linear;
+    cursor: pointer;
 }
 .content-3 .options p:hover{
     background-color: #2196F3;

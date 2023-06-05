@@ -16,5 +16,6 @@ function removeFromLS() {
 const prev = document.getElementById('home');
 prev.addEventListener('click', ()=>{
     removeFromLS();
+    localStorage.removeItem('score');
 });
 

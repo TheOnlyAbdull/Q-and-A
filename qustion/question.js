@@ -62,10 +62,63 @@ const storedQuestions = JSON.parse(localStorage.getItem("quizQuestions"));
 const question = document.querySelector('.quest');
 const options = document.querySelector('.options');
 
-let currentQuestionIndex = 0;
+
+
+// display currunt index question
 const displayQuestion = () =>{
     const currentQuestion = storedQuestions[currentQuestionIndex];
     question.textContent = currentQuestion.que;
-}
+
+    //Loop over options and create option
+    let displayOption = currentQuestion.opt.map((option, index)=>{
+        // index = 0;
+        return `<p class="opt" data-index="${index}">${option}</p>`
+    });
+    displayOption = displayOption.join('');
+    options.innerHTML = displayOption;
+
+    //when an option is clicked
+    const paragraphs = document.querySelectorAll('.opt');
+    paragraphs.forEach((paragraph, index)=>{
+    paragraph.addEventListener('click', ()=>{
+        const selectedOptionIndex = parseInt(paragraph.dataset.index);
+        const currentQuestion = storedQuestions[currentQuestionIndex];
+
+        if(selectedOptionIndex === currentQuestion.ans){
+            console.log('correct');
+            score++;
+            //storing the score
+            localStorage.setItem('score', JSON.stringify(score));
+            console.log(score);
+            
+        }else{
+            console.log(`wrong`);
+        }
+        currentQuestionIndex++;
+
+        //if there are more question
+        if(currentQuestionIndex < storedQuestions.length){
+            displayQuestion();
+        }else{
+            console.log(`your score is ${score}`);
+            window.location.href = "../result/result.html";
+        }
+    });
+
+    });
+
+};
+
+// Question index
+let currentQuestionIndex = 0;
+
+
+// Call the displayQuestion function to show the first question
 displayQuestion();
+
+// initial score
+let score = 0;
+
+
+
 

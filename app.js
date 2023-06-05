@@ -1,7 +1,3 @@
-//Data
-const questions = [
-
-]
 
 //SELECTING ELEMENTS FROM THE DOM
 const form = document.querySelector('.input-form');
