@@ -61,6 +61,7 @@ const storedQuestions = JSON.parse(localStorage.getItem("quizQuestions"));
 //Display questions
 const question = document.querySelector('.quest');
 const options = document.querySelector('.options');
+const index = document.querySelector('.ques-left');
 
 
 
@@ -68,6 +69,7 @@ const options = document.querySelector('.options');
 const displayQuestion = () =>{
     const currentQuestion = storedQuestions[currentQuestionIndex];
     question.textContent = currentQuestion.que;
+    index.textContent = `${currentQuestionIndex + 1} / ${storedQuestions.length}`;
 
     //Loop over options and create option
     let displayOption = currentQuestion.opt.map((option, index)=>{
