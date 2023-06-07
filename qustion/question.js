@@ -50,7 +50,7 @@ const quizQuestions = [
         opt : ['Peso', 'Euro', 'Real', 'Rupee'],
         ans : 2
     }
-]
+];
 
 //add questions to local storage 
 if(!localStorage.getItem(quizQuestions)){
@@ -58,15 +58,38 @@ if(!localStorage.getItem(quizQuestions)){
 }
 //Accessing questions
 const storedQuestions = JSON.parse(localStorage.getItem("quizQuestions"));
-//Display questions
+//Accesing elements
 const question = document.querySelector('.quest');
 const options = document.querySelector('.options');
 const index = document.querySelector('.ques-left');
+const seconds = document.querySelector('.seconds');
 
 
 
 // display currunt index question
 const displayQuestion = () =>{
+    let sec = 8;
+
+    const countDown = ()=>{
+        if(sec >= 0){
+            seconds.innerHTML = `${sec}s`;
+            sec--;
+        }else{
+            currentQuestionIndex++;
+            displayQuestion()
+            clearInterval(beginCount);
+        }
+    }
+    //Begin Count down
+    const beginCount = setInterval(countDown, 1000);
+
+    if(currentQuestionIndex >= storedQuestions.length){
+        clearInterval(beginCount);
+        window.location.href = "../result/result.html";
+    }
+
+
+    //Display questions 
     const currentQuestion = storedQuestions[currentQuestionIndex];
     question.textContent = currentQuestion.que;
     index.textContent = `${currentQuestionIndex + 1} / ${storedQuestions.length}`;
@@ -84,7 +107,7 @@ const displayQuestion = () =>{
     paragraphs.forEach((paragraph, index)=>{
     paragraph.addEventListener('click', ()=>{
         const selectedOptionIndex = parseInt(paragraph.dataset.index);
-        const currentQuestion = storedQuestions[currentQuestionIndex];
+        // const currentQuestion = storedQuestions[currentQuestionIndex];
 
         if(selectedOptionIndex === currentQuestion.ans){
             console.log('correct');
@@ -97,17 +120,23 @@ const displayQuestion = () =>{
             console.log(`wrong`);
         }
         currentQuestionIndex++;
+        clearInterval(beginCount);
 
         //if there are more question
         if(currentQuestionIndex < storedQuestions.length){
             displayQuestion();
         }else{
             console.log(`your score is ${score}`);
+            clearInterval(beginCount);
             window.location.href = "../result/result.html";
         }
     });
 
     });
+    
+    
+    
+
 
 };
 
