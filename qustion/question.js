@@ -6,9 +6,9 @@ const quizQuestions = [
         ans : 0
     },
     {
-        que : 'Which country is known as the "Land of the Rising Sun"?',
-        opt : ['China', 'Japan', 'South Korea', 'Thailand'],
-        ans : 1
+        que : 'Who wrote the play Romeo and Juliet?',
+        opt : ['Shakespeare', 'Dickens', 'Wilde', 'Austen'],
+        ans : 0 
     },
     {
         que : 'which country is the artiste Wizkid from ?',
@@ -21,14 +21,14 @@ const quizQuestions = [
         ans : 0
     },
     {
-        que : 'Which continent is home to the largest desert in the world, the Sahara?',
-        opt : ['Africa', ' Asia', 'South America', 'Australia'],
+        que : 'What is the largest ocean on Earth?',
+        opt : ['Pacific', 'Atlantic', 'Indian', 'Arctic'],
         ans : 0
     },
     {
-        que : 'Who is the author of the Harry Potter book series?',
-        opt : ['J.R.R. Tolkien', 'J.K. Rowling', 'George R.R. Martin', 'Stephenie Meyer'],
-        ans : 1
+        que : 'What is the currency of Japan?',
+        opt : ['Yen', 'Won', 'Yuan', 'Rupee'],
+        ans : 0
     },
     {
         que : 'What is the tallest mountain in the world?',

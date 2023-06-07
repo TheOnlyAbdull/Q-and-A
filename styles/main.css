@@ -238,12 +238,10 @@ p.ques-left{
     display: block;
     padding: .5rem 0;
 }
-
-
-
-
-
-
+#person-name{
+    text-transform: capitalize;
+    /* color: #212121; */
+}
 
 
 

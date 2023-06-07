@@ -15,11 +15,11 @@ if (score >= 5) {
     <span>${score}/10</span>`
 }else if(!score){
     total.innerHTML = `Better luck next time !!!, <span id="person-name">${getName}</span><br>
-    You Failed with total mark of <br>
+    You Failed with a total mark of <br>
     <span>0/10</span>`
 }else{
     total.innerHTML = `Better luck next time !!!, <span id="person-name">${getName}</span><br>
-    You Failed with total mark of <br>
+    You Failed with a total mark of <br>
     <span>${score}/10</span>`
 }
 
