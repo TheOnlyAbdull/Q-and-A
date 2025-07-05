@@ -268,7 +268,7 @@ const seconds = document.querySelector('.seconds');
 
 // display currunt index question
 const displayQuestion = () =>{
-    let sec = 8;
+    let sec = 15;
 
     const countDown = ()=>{
         if(sec >= 0){
