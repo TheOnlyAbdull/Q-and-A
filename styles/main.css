@@ -186,9 +186,9 @@ p.error{
     transition: background-color .4s linear;
     cursor: pointer;
 }
-.content-3 .options p:hover{
+/* .content-3 .options p:hover{
     background-color: #2196F3;
-}
+} */
 .btn-div.ques button{
     margin-top: .5rem;
 }
