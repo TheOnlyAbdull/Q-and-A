@@ -9,6 +9,7 @@ currName.textContent = getName;
 //FUNCTION remove name from local storage
 function removeFromLS() {
     localStorage.removeItem("name");
+    localStorage.removeItem("score");
     console.log('cleared ');
 }
 
